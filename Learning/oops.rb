@@ -1,4 +1,13 @@
+#mixin
+module Walkable
+  def walk
+    puts "#{@name} is walking"
+  end
+end
+#use include to import methods as instance methods and extend to import methods as class methods
+
 class Animal
+  include Walkable 
   def initialize(name)
     @name = name          # instance variable; encapsulated
     @secret = "hidden"    # encapsulation: no getter, private access
@@ -38,4 +47,5 @@ a.speak
 d = Dog.new("Buddy", "Golden Retriever")
 d.speak
 d.info
+d.walk     
 

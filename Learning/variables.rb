@@ -12,6 +12,7 @@ class Demo
     # Instance variable
     @text = "#{GREETING}, World"
     @@count += 1
+    
   end
 
   def show
@@ -29,5 +30,6 @@ end
 d = Demo.new
 d.show
 
+puts "#{@text}"
 puts "Global count: #{$counter}"
 puts "Class count: #{Demo.count}"
